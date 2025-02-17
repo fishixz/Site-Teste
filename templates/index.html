@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>Filmes Disponíveis</h1>
+    <div id="movie-list">
+        {% for movie in movies %}
+        <div class="movie">
+            <video width="320" height="240" controls>
+                <source src="{{ url_for('uploaded_file', filename=movie) }}" type="video/mp4">
+                Seu navegador não suporta o elemento de vídeo.
+            </video>
+            <p>{{ movie }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Upload de Filmes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</head>
+<body>
+    <h1>Upload de Filmes</h1>
+    <form id="upload-form" action="{{ url_for('admin') }}" method="post" enctype="multipart/form-data">
+        <label for="movie">Selecione o filme:</label>
+        <input type="file" id="movie" name="movie" accept="video/mp4" required>
+        <label for="movie_name">Nome do filme:</label>
+        <input type="text" id="movie_name" name="movie_name" required>
+        <button type="submit">Upload</button>
+    </form>
+    <div id="progress">
+        <progress id="progress-bar" value="0" max="100"></progress>
+        <span id="progress-text">0%</span>
+    </div>
+</body>
+</html>
