@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#movie-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.movie {
+    margin: 10px;
+}
+
+#upload-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#progress {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+progress {
+    width: 100%;
+    max-width: 400px;
+    height: 20px;
+}
+
+#progress-text {
+    margin-top: 10px;
+}
